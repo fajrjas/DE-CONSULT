@@ -107,7 +107,7 @@ const projectImage = [
       },
     ],
     original: proj6,
-
+    engineer: "Yaoiming",
     about: "Tall Gray Building Projects",
   },
   {
@@ -358,7 +358,9 @@ function Projects() {
               </div>
             </div>
           </div>
+
           {/* Details of specific project */}
+
           <div className="h-full select-none">
             <h2 className="text-xl text-white my-4 font-semibold">
               Project name:{" "}

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import DE_LOGO from "../assets/DE_CONSULT_LOGO.jpg";
 import { Link } from "react-router-dom";
+import Nav from "../ui/Nav";
 
 const Header = styled.header`
   height: 100dvh;
@@ -15,6 +16,7 @@ const Header = styled.header`
 function Homepage() {
   return (
     <Header>
+      <Nav />
       <div className="flex flex-col justify-evenly h-full">
         <h2 className="font-extrabold text-6xl text-blue-600 ">DE CONSULT</h2>
         <div>
@@ -30,7 +32,11 @@ function Homepage() {
         </div>
       </div>
       <div className="w-full h-[70%] self-center">
-        <img src={DE_LOGO} alt="" className="w-full h-full" />
+        <img
+          src={DE_LOGO}
+          alt=""
+          className="w-full h-full lg:animate-ping-slow rounded-sm lg:border-none lg:shadow-inner"
+        />
       </div>
     </Header>
   );
