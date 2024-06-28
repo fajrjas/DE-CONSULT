@@ -187,9 +187,8 @@ const ProjectContainer = styled.div`
   text-align: center;
   color: #294ed4;
   /* width: 70%; */
-  margin: 0 auto;
   height: 100%;
-  max-width: 1200px;
+
   /* background-color: rgba(128, 128, 128, 0.1); */
 `;
 
@@ -239,10 +238,10 @@ function Projects() {
 
   return (
     <div>
-      <ProjectContainer>
-        <div className="grid grid-cols-3 items-center max-w-[1200px] gap-8 select-none">
-          <div className="col-span-1">
-            <h1 className="text-[ #294ed4] font-bold text-5xl mt-15 mb-6">
+      <ProjectContainer className="max-w-[310px] mx-auto lg:max-w-[1200px]">
+        <div className="grid grid-rows-2 lg:grid-cols-3 lg:items-center lg:max-w-[1200px] lg:gap-8 select-none mt-56">
+          <div className="col-span-1 flex flex-col">
+            <h1 className="text-[ #294ed4] text-3xl font-bold lg:text-5xl lg:mt-15 mb-6">
               DE CONSULT PROJECTS
             </h1>
             <p className="text-[ #2d50d1] font-semibold text-2xl pt-2">
@@ -251,18 +250,18 @@ function Projects() {
           </div>
 
           {/* Projects  */}
-          <div className="col-span-2 ">
+          <div className="lg:col-span-2 ">
             <header>
-              <h2 className="text-white text-4xl mt-28 mb-2">
+              <h2 className="text-white text-4xl lg:mt-28 lg:mb-2">
                 {projectImage[currentIndex].about}
               </h2>
             </header>
-            <div className="max-w-[1200px] h-[600px] w-full m-auto pb-16 px-4 relative group transition-all">
+            <div className="lg:max-w-[1200px] h-[600px] lg:w-full m-auto pb-16 px-4 relative group transition-all max-w-[300px]">
               <div
                 style={{
                   backgroundImage: `url(${projectImage[currentIndex].original}`,
                 }}
-                className="w-full h-full rounded-2xl bg-center bg-contain  bg-no-repeat duration-500  "
+                className=" w-full h-full rounded-2xl bg-center bg-contain  bg-no-repeat duration-500  "
               ></div>
               {/* Left Arrow */}
               <div
@@ -281,13 +280,13 @@ function Projects() {
                 <BsChevronCompactRight size={30} />
               </div>
               <a
-                className="hover:translate-y-[20px] hover:color[#294ed4] absolute bottom-[3em] left-[15em] text-2xl p-2 text-white cursor-pointer duration-200 ease-in-out animate-bounce
+                className="hover:translate-y-[20px] hover:color[#294ed4] absolute bottom-[3em] lg:left-[15em] text-2xl p-2 text-white cursor-pointer duration-200 ease-in-out animate-bounce
             text-center
           "
                 // onClick={() => toDetails("project")}
                 href="#details"
               >
-                <a className="ml-[-12px] text-lg font-semibold">Details</a>
+                <p className="ml-[-12px] text-lg font-semibold">Details</p>
                 <BsChevronCompactDown size={30} />
               </a>
               <div className="flex - top-4 justify-center py-2">
@@ -304,86 +303,85 @@ function Projects() {
             </div>
           </div>
         </div>
+
         {/* Specific Project info */}
 
-        <div className="flex flex-row  items-center" id="details">
-          <div className="">
-            <div className="max-w-[700px]  h-[600px] w-[600px] m-auto py-16 px-4 relative group ">
-              <div
-                style={{
-                  backgroundImage: `url(${
-                    projectImage[currentIndex].thumbnail.length === 1
-                      ? projectImage[currentIndex].thumbnail[0].original
-                      : projectImage[currentIndex].thumbnail[currentIndexSPC]
-                          .original
-                  }`,
-                }}
-                className="w-full h-full rounded-2xl bg-center bg-contain  bg-no-repeat duration-500 shadow-md"
-              ></div>
+        <div className="flex lg:flex-row  lg:items-center " id="details">
+          <div className="lg:max-w-[700px]  h-[600px] lg:w-[600px] m-auto py-16 lg:px-4 relative group max-w-[300px] ">
+            <div
+              style={{
+                backgroundImage: `url(${
+                  projectImage[currentIndex].thumbnail.length === 1
+                    ? projectImage[currentIndex].thumbnail[0].original
+                    : projectImage[currentIndex].thumbnail[currentIndexSPC]
+                        .original
+                }`,
+              }}
+              className=" w-full h-full rounded-2xl bg-center bg-contain  bg-no-repeat duration-500  "
+            ></div>
 
-              {/* Left Arrow */}
-              {projectImage[currentIndex].thumbnail.length === 1 ? (
-                ""
-              ) : (
-                <div
-                  className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer
+            {/* Left Arrow */}
+            {projectImage[currentIndex].thumbnail.length === 1 ? (
+              ""
+            ) : (
+              <div
+                className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer
           "
-                  onClick={prevSlide}
-                >
-                  <BsChevronCompactLeft size={30} />
-                </div>
-              )}
-              {/* Right Arrow> */}
-              {projectImage[currentIndex].thumbnail.length === 1 ? (
-                ""
-              ) : (
-                <div
-                  className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer 
-          "
-                  onClick={nextSlide}
-                >
-                  <BsChevronCompactRight size={30} />
-                </div>
-              )}
-              <div className="flex - top-4 justify-center py-2">
-                {projectImage[currentIndex].thumbnail.map((img, index) => (
-                  <div
-                    onClick={() => goToSlide(index)}
-                    className="text-2xl cursor-pointer"
-                    key={index}
-                  >
-                    <RxDotFilled />
-                  </div>
-                ))}
+                onClick={prevSlide}
+              >
+                <BsChevronCompactLeft size={30} />
               </div>
+            )}
+            {/* Right Arrow> */}
+            {projectImage[currentIndex].thumbnail.length === 1 ? (
+              ""
+            ) : (
+              <div
+                className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer 
+          "
+                onClick={nextSlide}
+              >
+                <BsChevronCompactRight size={30} />
+              </div>
+            )}
+            <div className="flex - top-4 justify-center py-2">
+              {projectImage[currentIndex].thumbnail.map((img, index) => (
+                <div
+                  onClick={() => goToSlide(index)}
+                  className="text-2xl cursor-pointer"
+                  key={index}
+                >
+                  <RxDotFilled />
+                </div>
+              ))}
             </div>
           </div>
+        </div>
 
-          {/* Details of specific project */}
+        {/* Details of specific project */}
 
-          <div className="h-full select-none">
-            <h2 className="text-xl text-white my-4 font-semibold">
-              Project name:{" "}
-              <span className="text-2xl text-white font-bold ">
-                {" "}
-                {projectImage[currentIndex].about}
-              </span>
-            </h2>
-            <p className="text-white x">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
-              officia, natus voluptatum ducimus labore vel. Iure error
-              necessitatibus repellendus dolore, eius, sunt sequi nesciunt
-              architecto alias aut placeat laboriosam minus illo recusandae
-              odio. Labore corporis enim voluptate nulla culpa quam atque odio
-              natus amet, dicta ex. Earum aliquam quae enim.
-            </p>
-            <p className="text-red-600 mt-6 font-semibold">
-              Name of engineer of this project:{" "}
-            </p>
-            <span className=" text-red-900 font-bold text-xl capitalize underline">
-              Engr. {projectImage[currentIndex].engineer}
+        <div className="h-full select-none">
+          <h2 className="text-xl text-white my-4 font-semibold">
+            Project name:{" "}
+            <span className="text-2xl text-white font-bold ">
+              {" "}
+              {projectImage[currentIndex].about}
             </span>
-          </div>
+          </h2>
+          <p className="text-white x">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+            officia, natus voluptatum ducimus labore vel. Iure error
+            necessitatibus repellendus dolore, eius, sunt sequi nesciunt
+            architecto alias aut placeat laboriosam minus illo recusandae odio.
+            Labore corporis enim voluptate nulla culpa quam atque odio natus
+            amet, dicta ex. Earum aliquam quae enim.
+          </p>
+          <p className="text-red-600 mt-6 font-semibold">
+            Name of engineer of this project:{" "}
+          </p>
+          <span className=" text-red-900 font-bold text-xl capitalize underline">
+            Engr. {projectImage[currentIndex].engineer}
+          </span>
         </div>
       </ProjectContainer>
     </div>

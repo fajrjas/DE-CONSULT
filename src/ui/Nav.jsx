@@ -1,6 +1,10 @@
 import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 import DE_LOGO from "../assets/DE_CONSULT_LOGO.jpg";
+import { TbLetterX } from "react-icons/tb";
+import { useState } from "react";
+import { HiMenu } from "react-icons/hi";
+
 const NavComponent = styled.nav`
   position: fixed;
   top: 0;
@@ -8,27 +12,11 @@ const NavComponent = styled.nav`
   right: 0;
   color: white;
 
-  height: 90px;
-
-  /* display: grid;
-  grid-template-columns: 2fr 1fr;
-  place-items: center; */
-
-  z-index: 5;
   background-color: rgba(0, 0, 0, 0.87);
 `;
 
 const StyledNavLink = styled(NavLink)`
-  /* &.active,
-  &.active:visited {
-    text-underline-offset: 6px;
-    text-decoration: underline;
-  } */
-  /* &.active:hover {
-    text-decoration: inherit;
-  } */
   position: relative;
-
   &:after {
     content: "";
     position: absolute;
@@ -41,12 +29,10 @@ const StyledNavLink = styled(NavLink)`
     transition: transform 0.4s ease-in-out;
     transform-origin: bottom right;
   }
-
   &:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
-
   &.active,
   &.active:visited {
     &:after {
@@ -57,28 +43,58 @@ const StyledNavLink = styled(NavLink)`
 `;
 
 function Nav() {
+  const [isToggle, setIsToggle] = useState(false);
+
+  const handleToggle = () => {
+    setIsToggle((state) => !state);
+  };
+
   return (
-    <NavComponent>
-      <div className="max-w-[80em] flex justify-between items-center mx-auto h-full">
-        <Link to={"/"} className={"w-[4em] h-[4em]"}>
+    <NavComponent className="z-40 h-[80px] sm:h-[90px]">
+      <div className="flex justify-around items-center md:flex-row h-full relative bg-black">
+        <Link
+          to={"/"}
+          className={`${isToggle ? "hidden" : "block"} w-[4em] h-[4em]`}
+        >
           <img
             src={DE_LOGO}
             alt=""
             className="w-full h-full border-none rounded-full"
           />
         </Link>
-        {/* hover:underline hover:underline-offset-[6px] transition-all delay-200 ease-out */}
-        <ul className="flex justify-between mr-10 capitalize gap-20  text-2xl">
-          <li className="text-md font-bold ">
-            <StyledNavLink to={"/"}>Home</StyledNavLink>
-          </li>
-          <li className="text-md font-bold ">
-            <StyledNavLink to={"/projects"}>Projects</StyledNavLink>
-          </li>
-          <li className="text-md font-bold ">
-            <StyledNavLink to={"/about"}>About</StyledNavLink>
-          </li>
-        </ul>
+        <div
+          className={`${isToggle ? "hidden" : "block"} text-2xl md:hidden`}
+          onClick={handleToggle}
+        >
+          <HiMenu />
+        </div>
+        <div
+          className={`${
+            isToggle
+              ? "translate-y-0 opacity-100 bg-blue-900"
+              : "-translate-y-full opacity-0"
+          } transform transition duration-700 ease-in-out md:translate-y-0 md:opacity-100  absolute z-50 top-0 left-0 right-0 h-[60dvh] md:h-full text-center md:static`}
+        >
+          <div className="flex flex-col justify-evenly items-center w-full h-full mt-6">
+            <div
+              className="md:hidden self-end mr-5 text-2xl border-2 border-black"
+              onClick={handleToggle}
+            >
+              <TbLetterX />
+            </div>
+            <ul className="w-full h-full flex flex-col justify-center md:flex-row md:justify-between md:mr-10 lg:m-0 capitalize gap-20 text-xl lg:text-2xl">
+              <li className="text-md font-bold">
+                <StyledNavLink to={"/"}>Home</StyledNavLink>
+              </li>
+              <li className="text-md font-bold">
+                <StyledNavLink to={"/projects"}>Projects</StyledNavLink>
+              </li>
+              <li className="text-md font-bold">
+                <StyledNavLink to={"/about"}>About</StyledNavLink>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </NavComponent>
   );

@@ -6,6 +6,7 @@ import Nav from "./ui/Nav";
 const Main = styled.div`
   height: max-content;
   background-color: black;
+  width: 100dvw;
 `;
 
 function AppLayout() {
