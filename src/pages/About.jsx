@@ -1,7 +1,7 @@
 function About() {
   return (
     <div className="h-full w-full text-white mt-0  grid place-self-center text-center">
-      <div className="max-w-[900px] mx-auto">
+      <div className="max-w-[900px] mx-auto mt-10">
         <h2 className="mt-20 font-bold text-4xl mb-10">
           DE Consult: Building Expertise, Delivering Excellence
         </h2>
