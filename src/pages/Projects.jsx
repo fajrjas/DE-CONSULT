@@ -239,7 +239,7 @@ function Projects() {
   return (
     <div>
       <ProjectContainer className="max-w-[310px] mx-auto md:max-w-[600px] lg:max-w-[1200px]">
-        <div className="grid lg:grid-cols-3 lg:items-center lg:max-w-[1200px] gap-12 select-none mt-56 md:mt-0">
+        <div className="grid lg:grid-cols-3 lg:items-center lg:max-w-[1200px] gap-12 select-none mt-56 md:mt-0 ">
           <div className="col-span-1 flex flex-col">
             <h1 className="text-[ #294ed4] text-3xl font-bold lg:text-5xl lg:mt-15 mb-6">
               DE CONSULT PROJECTS
@@ -250,13 +250,13 @@ function Projects() {
           </div>
 
           {/* Projects  */}
-          <div className="lg:col-span-2 ">
+          <div className="lg:col-span-2  ">
             <header>
               <h2 className="text-white text-4xl lg:mt-28 lg:mb-2">
                 {projectImage[currentIndex].about}
               </h2>
             </header>
-            <div className="lg:max-w-[1200px] h-[500px] lg:w-full mx-auto pb-16 px-4 relative group transition-all max-w-[300px]">
+            <div className="lg:max-w-[700px] h-[400px] lg:h-[500px] lg:w-full mx-auto pb-16 px-4 relative group transition-all max-w-[300px]">
               <div
                 style={{
                   backgroundImage: `url(${projectImage[currentIndex].original}`,
@@ -305,83 +305,84 @@ function Projects() {
         </div>
 
         {/* Specific Project info */}
-        <div className="lg:col-span-2 " id="details">
-          <header className="w-[300px]"></header>
-          <div className="lg:max-w-[1200px] h-[500px] lg:w-full m-auto pb-16 px-4 relative group transition-all max-w-[300px]">
-            <div
-              style={{
-                backgroundImage: `url(${
-                  projectImage[currentIndex].thumbnail.length === 1
-                    ? projectImage[currentIndex].thumbnail[0].original
-                    : projectImage[currentIndex].thumbnail[currentIndexSPC]
-                        .original
-                }`,
-              }}
-              className=" w-full h-full rounded-2xl bg-center bg-contain  bg-no-repeat duration-500  "
-            ></div>
-            {/* Left Arrow */}
-            {projectImage[currentIndex].thumbnail.length === 1 ? (
-              ""
-            ) : (
+        <div className="grid md:grid-cols-2 pb-14 mt-28  gap-10">
+          <div className=" " id="details">
+            <header className="w-[300px]"></header>
+            <div className="lg:max-w-[1200px] h-[400px] lg:h-[500px] lg:w-full m-auto pb-16 px-4 relative group transition-all max-w-[300px]">
               <div
-                className="hidden group-hover:block absolute top-[45%] translate-y-[-45%] md:top-[50%] -translate-x-0 md:translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer
-          "
-                onClick={prevSlide}
-              >
-                <BsChevronCompactLeft size={30} />
-              </div>
-            )}
-            {/* Right Arrow> */}
-            {projectImage[currentIndex].thumbnail.length === 1 ? (
-              ""
-            ) : (
-              <div
-                className="hidden group-hover:block absolute top-[45%] translate-y-[-45%] md:top-[50%] -translate-x-0 md:translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer 
-          "
-                onClick={nextSlide}
-              >
-                <BsChevronCompactRight size={30} />
-              </div>
-            )}
-
-            <div className="flex top-4 justify-center py-2">
-              {projectImage[currentIndex].thumbnail.map((img, index) => (
+                style={{
+                  backgroundImage: `url(${
+                    projectImage[currentIndex].thumbnail.length === 1
+                      ? projectImage[currentIndex].thumbnail[0].original
+                      : projectImage[currentIndex].thumbnail[currentIndexSPC]
+                          .original
+                  }`,
+                }}
+                className=" w-full h-full rounded-2xl bg-center bg-contain  bg-no-repeat duration-500  "
+              ></div>
+              {/* Left Arrow */}
+              {projectImage[currentIndex].thumbnail.length === 1 ? (
+                ""
+              ) : (
                 <div
-                  onClick={() => goToSlide(index)}
-                  className="text-2xl cursor-pointer"
-                  key={index}
+                  className="hidden group-hover:block absolute top-[45%] translate-y-[-45%] md:top-[50%] -translate-x-0 md:translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer
+          "
+                  onClick={prevSlide}
                 >
-                  <RxDotFilled />
+                  <BsChevronCompactLeft size={30} />
                 </div>
-              ))}
+              )}
+              {/* Right Arrow> */}
+              {projectImage[currentIndex].thumbnail.length === 1 ? (
+                ""
+              ) : (
+                <div
+                  className="hidden group-hover:block absolute top-[45%] translate-y-[-45%] md:top-[50%] -translate-x-0 md:translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer 
+          "
+                  onClick={nextSlide}
+                >
+                  <BsChevronCompactRight size={30} />
+                </div>
+              )}
+
+              <div className="flex top-4 justify-center py-2">
+                {projectImage[currentIndex].thumbnail.map((img, index) => (
+                  <div
+                    onClick={() => goToSlide(index)}
+                    className="text-2xl cursor-pointer"
+                    key={index}
+                  >
+                    <RxDotFilled />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Details of specific project */}
-
-        <div className="h-full select-none mb-10 mt-8">
-          <h2 className="text-xl text-white my-4 font-semibold">
-            Project name:{" "}
-            <span className="text-2xl text-white font-bold ">
-              {" "}
-              {projectImage[currentIndex].about}
+          {/* Details of specific project */}
+          <div className="h-full select-none mb-10 mt-8">
+            <h2 className="text-xl text-white my-4 font-semibold">
+              Project name:{" "}
+              <span className="text-2xl text-white font-bold ">
+                {" "}
+                {projectImage[currentIndex].about}
+              </span>
+            </h2>
+            <p className="text-white ">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+              officia, natus voluptatum ducimus labore vel. Iure error
+              necessitatibus repellendus dolore, eius, sunt sequi nesciunt
+              architecto alias aut placeat laboriosam minus illo recusandae
+              odio. Labore corporis enim voluptate nulla culpa quam atque odio
+              natus amet, dicta ex. Earum aliquam quae enim.
+            </p>
+            <p className="text-red-600 mt-6 font-semibold">
+              Name of engineer of this project:{" "}
+            </p>
+            <span className=" text-red-900 font-bold text-xl capitalize underline">
+              Engr. {projectImage[currentIndex].engineer}
             </span>
-          </h2>
-          <p className="text-white ">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
-            officia, natus voluptatum ducimus labore vel. Iure error
-            necessitatibus repellendus dolore, eius, sunt sequi nesciunt
-            architecto alias aut placeat laboriosam minus illo recusandae odio.
-            Labore corporis enim voluptate nulla culpa quam atque odio natus
-            amet, dicta ex. Earum aliquam quae enim.
-          </p>
-          <p className="text-red-600 mt-6 font-semibold">
-            Name of engineer of this project:{" "}
-          </p>
-          <span className=" text-red-900 font-bold text-xl capitalize underline">
-            Engr. {projectImage[currentIndex].engineer}
-          </span>
+          </div>
         </div>
       </ProjectContainer>
     </div>

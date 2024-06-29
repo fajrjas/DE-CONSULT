@@ -24,7 +24,7 @@ function Homepage() {
           <h2 className="font-extrabold mt-16 sm:mt-1 text-5xl lg:text-6xl text-blue-600 pb-3">
             DE CONSULT
           </h2>
-          <div>
+          <div className="pb-10">
             <p className="font-medium text-lg mb-8">
               DE Consult is an engineering consulting firm founded and
               established in 2020. It provides architecture, structure,
@@ -33,7 +33,7 @@ function Homepage() {
             </p>
             <button className="rounded-full border-none bg-blue-900 hover:bg-blue-950 text-white text-lg py-2 px-10 mt-10 ease-in-out duration-200">
               <a href="#engineers" className="flex items-center flex-row gap-5">
-                <span>Our Engineers</span>{" "}
+                <span>Our&nbsp;Engineers</span>{" "}
                 <FaArrowDown className="self-end animate-bounce" />
               </a>
             </button>
@@ -48,10 +48,10 @@ function Homepage() {
         </div>
       </Header>
       <div
-        className="bg-blue-900 grid place-items-start  md:grid-cols-3 text-center min-h-screen h-full gap-6 pb-10"
+        className="bg-blue-900 grid place-items-start pt-10  md:grid-cols-3 text-center min-h-screen h-[80%] gap-6 pb-10"
         id="engineers"
       >
-        <div className="max-w-[500px] mx-auto font-serif mt-8 lg:mt-20 grid gap-6 bg-slate-700 shadow-xl">
+        <div className="max-w-[300px] sm:max-w-[400px] md:max-w-[500px] mx-auto font-serif mt-8 lg:mt-20 grid  bg-slate-700 shadow-xl">
           <h1 className="font-bold text-xl md:text-2xl lg:text-3xl text-center underline underline-offset-8 my-4 text-[#151b18be]">
             Engr. Almajid Idjas
           </h1>
@@ -71,7 +71,7 @@ function Homepage() {
             />
           </div>
         </div>
-        <div className="max-w-[500px] mx-auto font-serif mt-8 lg:mt-20 grid gap-6 bg-slate-700 shadow-xl">
+        <div className="max-w-[300px] sm:max-w-[400px] md:max-w-[500px] mx-auto font-serif mt-8 lg:mt-20 grid  bg-slate-700 shadow-xl">
           <h1 className="font-bold text-xl md:text-2xl lg:text-3xl text-center underline underline-offset-8 my-4 text-[#151b18be]">
             Engr. Shawn Mendez
           </h1>
@@ -89,7 +89,7 @@ function Homepage() {
             />
           </div>
         </div>
-        <div className="max-w-[500px] mx-auto font-serif mt-8 lg:mt-20 grid gap-6 bg-slate-700 shadow-xl">
+        <div className=" max-w-[300px] sm:max-w-[400px] md:max-w-[500px] mx-auto font-serif mt-8 lg:mt-20 grid  bg-slate-700 shadow-xl">
           <h1 className="font-bold text-xl md:text-2xl lg:text-3xl  text-center underline underline-offset-8 my-4 text-[#151b18be] ">
             Engr. Jawpakkal
           </h1>
