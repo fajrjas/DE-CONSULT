@@ -92,6 +92,9 @@ function Nav() {
               <li className="text-md font-bold">
                 <StyledNavLink to={"/about"}>About</StyledNavLink>
               </li>
+              <li className="text-md font-bold">
+                <StyledNavLink to={"/contact"}>Contact Us</StyledNavLink>
+              </li>
             </ul>
           </div>
         </div>

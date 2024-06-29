@@ -236,10 +236,17 @@ function Projects() {
     setCurrentIndexSPC(index);
   };
 
+  const toDetails = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div>
       <ProjectContainer className="max-w-[310px] mx-auto md:max-w-[600px] lg:max-w-[1200px]">
-        <div className="grid lg:grid-cols-3 lg:items-center lg:max-w-[1200px] gap-12 select-none mt-56 md:mt-0 ">
+        <div className="grid lg:grid-cols-3 lg:items-center lg:max-w-[1200px] gap-12 select-none mt-56 lg:mt-0 ">
           <div className="col-span-1 flex flex-col">
             <h1 className="text-[ #294ed4] text-3xl font-bold lg:text-5xl lg:mt-15 mb-6">
               DE CONSULT PROJECTS
@@ -256,7 +263,7 @@ function Projects() {
                 {projectImage[currentIndex].about}
               </h2>
             </header>
-            <div className="lg:max-w-[700px] h-[400px] lg:h-[500px] lg:w-full mx-auto pb-16 px-4 relative group transition-all max-w-[300px]">
+            <div className="lg:max-w-[700px] h-[400px] lg:h-[500px] lg:w-full mx-auto pb-16 px-4 relative group transition-all max-w-[300px] md:max-w-[600px]">
               <div
                 style={{
                   backgroundImage: `url(${projectImage[currentIndex].original}`,
@@ -279,16 +286,16 @@ function Projects() {
               >
                 <BsChevronCompactRight size={30} />
               </div>
-              <a
-                className="hover:translate-y-[20px] hover:color[#294ed4] absolute bottom-[3em] ml-[-18px] lg:left-[15em] text-2xl p-2 text-white cursor-pointer duration-200 ease-in-out animate-bounce
+              <div
+                className="hover:translate-y-[20px] hover:color[#294ed4] absolute bottom-[3em] ml-[4.5em] md:ml-[7em] lg:left-[15em] text-2xl p-2 text-white cursor-pointer duration-200 ease-in-out animate-bounce
             text-center
           "
-                // onClick={() => toDetails("project")}
-                href="#details"
+                onClick={() => toDetails("details")}
+                // href="#details"
               >
                 <p className="ml-[-12px] text-lg font-semibold">Details</p>
                 <BsChevronCompactDown size={30} />
-              </a>
+              </div>
               <div className="flex - top-4 justify-center py-2">
                 {projectImage.map((img, index) => (
                   <div
@@ -305,8 +312,8 @@ function Projects() {
         </div>
 
         {/* Specific Project info */}
-        <div className="grid md:grid-cols-2 pb-14 mt-28  gap-10">
-          <div className=" " id="details">
+        <div className="grid md:grid-cols-2 pb-14 mt-28  md:gap-10 ">
+          <div className="" id="details">
             <header className="w-[300px]"></header>
             <div className="lg:max-w-[1200px] h-[400px] lg:h-[500px] lg:w-full m-auto pb-16 px-4 relative group transition-all max-w-[300px]">
               <div

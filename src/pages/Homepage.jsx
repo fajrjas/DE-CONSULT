@@ -16,6 +16,12 @@ const Header = styled.header`
 `;
 
 function Homepage() {
+  const scrollToElement = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <>
       <Header className="md:grid-cols-custom-2fr-1fr">
@@ -31,11 +37,14 @@ function Homepage() {
               interior, map design and quantity surveying, supervision, building
               information modeling and third party review of structural design.
             </p>
-            <button className="rounded-full border-none bg-blue-900 hover:bg-blue-950 text-white text-lg py-2 px-10 mt-10 ease-in-out duration-200">
-              <a href="#engineers" className="flex items-center flex-row gap-5">
+            <button
+              onClick={() => scrollToElement("engineers")}
+              className="rounded-full border-none bg-blue-900 hover:bg-blue-950 text-white text-lg py-2 px-10 mt-10 ease-in-out duration-200"
+            >
+              <div className="flex items-center flex-row gap-5">
                 <span>Our&nbsp;Engineers</span>{" "}
                 <FaArrowDown className="self-end animate-bounce" />
-              </a>
+              </div>
             </button>
           </div>
         </div>
