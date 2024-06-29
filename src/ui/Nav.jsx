@@ -71,7 +71,7 @@ function Nav() {
         <div
           className={`${
             isToggle
-              ? "translate-y-0 opacity-100 bg-blue-900"
+              ? "translate-y-0 opacity-100 bg-blue-900 pb-6"
               : "-translate-y-full opacity-0"
           } transform transition duration-700 ease-in-out md:translate-y-0 md:opacity-100  absolute z-50 top-0 left-0 right-0 h-[60dvh] md:h-full text-center md:static`}
         >
@@ -84,16 +84,30 @@ function Nav() {
             </div>
             <ul className="w-full h-full flex flex-col justify-center md:flex-row md:justify-between md:mr-10 lg:m-0 capitalize gap-20 text-xl lg:text-2xl">
               <li className="text-md font-bold">
-                <StyledNavLink to={"/"}>Home</StyledNavLink>
+                <StyledNavLink to={"/"} onClick={() => setIsToggle(false)}>
+                  Home
+                </StyledNavLink>
               </li>
               <li className="text-md font-bold">
-                <StyledNavLink to={"/projects"}>Projects</StyledNavLink>
+                <StyledNavLink
+                  to={"/projects"}
+                  onClick={() => setIsToggle(false)}
+                >
+                  Projects
+                </StyledNavLink>
               </li>
               <li className="text-md font-bold">
-                <StyledNavLink to={"/about"}>About</StyledNavLink>
+                <StyledNavLink to={"/about"} onClick={() => setIsToggle(false)}>
+                  About
+                </StyledNavLink>
               </li>
               <li className="text-md font-bold">
-                <StyledNavLink to={"/contact"}>Contact Us</StyledNavLink>
+                <StyledNavLink
+                  to={"/contact"}
+                  onClick={() => setIsToggle(false)}
+                >
+                  Contact Us
+                </StyledNavLink>
               </li>
             </ul>
           </div>
