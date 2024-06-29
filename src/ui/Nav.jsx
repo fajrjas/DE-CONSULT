@@ -50,7 +50,7 @@ function Nav() {
   };
 
   return (
-    <NavComponent className="z-40 h-[80px] sm:h-[90px]">
+    <NavComponent className="z-50 h-[80px] sm:h-[90px]">
       <div className="flex justify-around items-center md:flex-row h-full relative bg-black">
         <Link
           to={"/"}
@@ -71,9 +71,9 @@ function Nav() {
         <div
           className={`${
             isToggle
-              ? "translate-y-0 opacity-100 bg-blue-900 pb-6"
+              ? "translate-y-0 opacity-100 bg-blue-900"
               : "-translate-y-full opacity-0"
-          } transform transition duration-700 ease-in-out md:translate-y-0 md:opacity-100  absolute z-50 top-0 left-0 right-0 h-[60dvh] md:h-full text-center md:static`}
+          } transform transition duration-700 ease-in-out md:translate-y-0 md:opacity-100  absolute z-50 top-0 left-0 right-0 h-[70dvh] md:h-full text-center md:static`}
         >
           <div className="flex flex-col justify-evenly items-center w-full h-full mt-6">
             <div
