@@ -238,8 +238,8 @@ function Projects() {
 
   return (
     <div>
-      <ProjectContainer className="max-w-[310px] mx-auto lg:max-w-[1200px]">
-        <div className="grid grid-rows-2 lg:grid-cols-3 lg:items-center lg:max-w-[1200px] lg:gap-8 select-none mt-56">
+      <ProjectContainer className="max-w-[310px] mx-auto md:max-w-[600px] lg:max-w-[1200px]">
+        <div className="grid lg:grid-cols-3 lg:items-center lg:max-w-[1200px] gap-12 select-none mt-56 md:mt-0">
           <div className="col-span-1 flex flex-col">
             <h1 className="text-[ #294ed4] text-3xl font-bold lg:text-5xl lg:mt-15 mb-6">
               DE CONSULT PROJECTS
@@ -256,7 +256,7 @@ function Projects() {
                 {projectImage[currentIndex].about}
               </h2>
             </header>
-            <div className="lg:max-w-[1200px] h-[600px] lg:w-full m-auto pb-16 px-4 relative group transition-all max-w-[300px]">
+            <div className="lg:max-w-[1200px] h-[500px] lg:w-full mx-auto pb-16 px-4 relative group transition-all max-w-[300px]">
               <div
                 style={{
                   backgroundImage: `url(${projectImage[currentIndex].original}`,
@@ -280,7 +280,7 @@ function Projects() {
                 <BsChevronCompactRight size={30} />
               </div>
               <a
-                className="hover:translate-y-[20px] hover:color[#294ed4] absolute bottom-[3em] lg:left-[15em] text-2xl p-2 text-white cursor-pointer duration-200 ease-in-out animate-bounce
+                className="hover:translate-y-[20px] hover:color[#294ed4] absolute bottom-[3em] ml-[-18px] lg:left-[15em] text-2xl p-2 text-white cursor-pointer duration-200 ease-in-out animate-bounce
             text-center
           "
                 // onClick={() => toDetails("project")}
@@ -305,9 +305,9 @@ function Projects() {
         </div>
 
         {/* Specific Project info */}
-
-        <div className="flex lg:flex-row  lg:items-center " id="details">
-          <div className="lg:max-w-[700px]  h-[600px] lg:w-[600px] m-auto py-16 lg:px-4 relative group max-w-[300px] ">
+        <div className="lg:col-span-2 " id="details">
+          <header className="w-[300px]"></header>
+          <div className="lg:max-w-[1200px] h-[500px] lg:w-full m-auto pb-16 px-4 relative group transition-all max-w-[300px]">
             <div
               style={{
                 backgroundImage: `url(${
@@ -319,7 +319,6 @@ function Projects() {
               }}
               className=" w-full h-full rounded-2xl bg-center bg-contain  bg-no-repeat duration-500  "
             ></div>
-
             {/* Left Arrow */}
             {projectImage[currentIndex].thumbnail.length === 1 ? (
               ""
@@ -344,7 +343,8 @@ function Projects() {
                 <BsChevronCompactRight size={30} />
               </div>
             )}
-            <div className="flex - top-4 justify-center py-2">
+
+            <div className="flex top-4 justify-center py-2">
               {projectImage[currentIndex].thumbnail.map((img, index) => (
                 <div
                   onClick={() => goToSlide(index)}
@@ -360,7 +360,7 @@ function Projects() {
 
         {/* Details of specific project */}
 
-        <div className="h-full select-none">
+        <div className="h-full select-none mb-10 mt-8">
           <h2 className="text-xl text-white my-4 font-semibold">
             Project name:{" "}
             <span className="text-2xl text-white font-bold ">
@@ -368,7 +368,7 @@ function Projects() {
               {projectImage[currentIndex].about}
             </span>
           </h2>
-          <p className="text-white x">
+          <p className="text-white ">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
             officia, natus voluptatum ducimus labore vel. Iure error
             necessitatibus repellendus dolore, eius, sunt sequi nesciunt

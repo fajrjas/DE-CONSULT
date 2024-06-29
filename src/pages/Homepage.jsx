@@ -3,6 +3,7 @@ import DE_LOGO from "../assets/DE_CONSULT_LOGO.jpg";
 import EngrPhoto from "../assets/206f74a2-4e90-44bd-b415-81cb6c327523.jfif";
 import { Link } from "react-router-dom";
 import Nav from "../ui/Nav";
+import { FaArrowDown } from "react-icons/fa";
 
 const Header = styled.header`
   height: 100dvh;
@@ -31,7 +32,10 @@ function Homepage() {
               information modeling and third party review of structural design.
             </p>
             <button className="rounded-full border-none bg-blue-900 hover:bg-blue-950 text-white text-lg py-2 px-10 mt-10 ease-in-out duration-200">
-              <Link to={"/projects"}>Our Projects</Link>
+              <a href="#engineers" className="flex items-center flex-row gap-5">
+                <span>Our Engineers</span>{" "}
+                <FaArrowDown className="self-end animate-bounce" />
+              </a>
             </button>
           </div>
         </div>
@@ -43,23 +47,64 @@ function Homepage() {
           />
         </div>
       </Header>
-      <div className="bg-blue-800 grid place-items-center text-center min-h-screen h-full">
-        <div className="max-w-[500px] mx-auto font-serif mt-8 grid gap-6">
-          <h1 className="font-bold text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center underline underline-offset-8 my-4">
+      <div
+        className="bg-blue-900 grid place-items-start  md:grid-cols-3 text-center min-h-screen h-full gap-6 pb-10"
+        id="engineers"
+      >
+        <div className="max-w-[500px] mx-auto font-serif mt-8 lg:mt-20 grid gap-6 bg-slate-700 shadow-xl">
+          <h1 className="font-bold text-xl md:text-2xl lg:text-3xl text-center underline underline-offset-8 my-4 text-[#151b18be]">
             Engr. Almajid Idjas
           </h1>
-          <p className="text-lg md:text-xl max-w-[70%] mx-auto text-black md:order-2  my-4">
-            Engr. Almajid Idjas is a structural engineer with nearly seven years
-            of experience. He graduated from Western Mindanao State University
-            (WMSU) with a civil engineering degree in 2016. Currently, he holds
-            an executive position at DE CONSULT, leveraging his structural
-            engineering expertise to contribute to the firm&apos;s success.
+          <p className="text-sm md:text-xl max-w-[70%] mx-auto text-white md:order-2  my-4">
+            <span className="text-black font-bold">Engr. Almajid Idjas</span> is
+            a structural engineer with nearly seven years of experience. He
+            graduated from Western Mindanao State University (WMSU) with a civil
+            engineering degree in 2016. Currently, he holds an executive
+            position at DE CONSULT, leveraging his structural engineering
+            expertise to contribute to the firm&apos;s success.
           </p>
-          <div className=" place-self-center mx-auto my-4 md:order-1">
+          <div className=" place-self-center mx-auto my-4 md:order-1 w-[12em] h-[12em]">
             <img
               src={EngrPhoto}
               alt=""
-              className="w-full  border-none border-collapse border-spacing-5 rounded-md shadow-2xl mix-blend-plus-darker"
+              className="w-full h-full  border-none shadow-2xl mix-blend-plus-darker rounded-full"
+            />
+          </div>
+        </div>
+        <div className="max-w-[500px] mx-auto font-serif mt-8 lg:mt-20 grid gap-6 bg-slate-700 shadow-xl">
+          <h1 className="font-bold text-xl md:text-2xl lg:text-3xl text-center underline underline-offset-8 my-4 text-[#151b18be]">
+            Engr. Shawn Mendez
+          </h1>
+          <p className="text-lg md:text-xl max-w-[70%] mx-auto text-white md:order-2  my-4">
+            <span className="text-black font-bold">Engr. Shawn Mendez</span>{" "}
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+            sapiente totam quis, in incidunt error vero voluptates nam officiis
+            optio.
+          </p>
+          <div className=" place-self-center mx-auto my-4 md:order-1 w-[12em] h-[12em]">
+            <img
+              src={EngrPhoto}
+              alt=""
+              className="w-full h-full  border-none shadow-2xl mix-blend-plus-darker rounded-full"
+            />
+          </div>
+        </div>
+        <div className="max-w-[500px] mx-auto font-serif mt-8 lg:mt-20 grid gap-6 bg-slate-700 shadow-xl">
+          <h1 className="font-bold text-xl md:text-2xl lg:text-3xl  text-center underline underline-offset-8 my-4 text-[#151b18be] ">
+            Engr. Jawpakkal
+          </h1>
+          <p className="text-lg md:text-xl max-w-[70%] mx-auto text-white md:order-2  my-4">
+            <span className="text-black font-bold"> Engr. Jawpakkals</span>{" "}
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quis
+            quibusdam cum ut provident numquam explicabo aspernatur aperiam
+            accusantium, perspiciatis porro atque commodi laborum, debitis ipsam
+            at consequatur assumenda? Voluptatibus?
+          </p>
+          <div className=" place-self-center mx-auto my-4 md:order-1 w-[12em] h-[12em]">
+            <img
+              src={EngrPhoto}
+              alt=""
+              className="w-full h-full  border-none shadow-2xl mix-blend-plus-darker rounded-full"
             />
           </div>
         </div>
