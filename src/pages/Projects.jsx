@@ -11,7 +11,7 @@ import proj7 from "../assets/2022-02-15_12-27-27.jpg";
 import proj8 from "../assets/2022-02-15_12-36-57.jpg";
 import proj9 from "../assets/AERIAL 01-FULL.jpg";
 import "react-image-gallery/styles/css/image-gallery.css";
-
+import { useEffect } from "react";
 import {
   BsChevronCompactDown,
   BsChevronCompactLeft,
@@ -196,6 +196,10 @@ function Projects() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentIndexSPC, setCurrentIndexSPC] = useState(0);
 
+  useEffect(function () {
+    projectImage;
+  }, []);
+
   const prevSlide = (type) => {
     if (type === "project")
       return setCurrentIndex((currentImage) => {
@@ -287,7 +291,7 @@ function Projects() {
                 <BsChevronCompactRight size={30} />
               </div>
               <div
-                className="hover:translate-y-[20px] hover:color[#294ed4] absolute bottom-[3em] ml-[4.6em] md:ml-[-1em] lg:left-[15em] text-2xl p-2 text-white cursor-pointer duration-200 ease-in-out animate-bounce
+                className="hover:translate-y-[20px] hover:color[#294ed4] absolute bottom-[3em] ml-[4.6em] md:ml-[6em] lg:ml-[-1em] lg:left-[15em] text-2xl p-2 text-white cursor-pointer duration-200 ease-in-out animate-bounce
             text-center
           "
                 onClick={() => toDetails("details")}
