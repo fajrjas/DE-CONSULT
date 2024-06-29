@@ -23,12 +23,13 @@ function Homepage() {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   return (
     <>
       <Header className="md:grid-cols-custom-2fr-1fr">
         <Nav />
         <div className="flex flex-col justify-evenly h-full sm:h-[80%]">
-          <h2 className="font-extrabold mt-16 sm:mt-1 text-5xl lg:text-6xl text-blue-600 pb-3">
+          <h2 className="font-extrabold mt-16 lg:mt-28 text-5xl lg:text-6xl text-blue-600 pb-3">
             DE CONSULT
           </h2>
           <div className="pb-10">
