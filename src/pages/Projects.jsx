@@ -265,7 +265,7 @@ function Projects() {
               ></div>
               {/* Left Arrow */}
               <div
-                className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer
+                className="hidden group-hover:block absolute top-[45%] translate-y-[-45%] md:top-[50%] -translate-x-0 md:translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer
           "
                 onClick={() => prevSlide("project")}
               >
@@ -273,7 +273,7 @@ function Projects() {
               </div>
               {/* Right Arrow> */}
               <div
-                className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer
+                className="hidden group-hover:block absolute top-[45%] translate-y-[-45%] md:top-[50%] -translate-x-0 md:translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer
           "
                 onClick={() => nextSlide("project")}
               >
@@ -324,7 +324,7 @@ function Projects() {
               ""
             ) : (
               <div
-                className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer
+                className="hidden group-hover:block absolute top-[45%] translate-y-[-45%] md:top-[50%] -translate-x-0 md:translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer
           "
                 onClick={prevSlide}
               >
@@ -336,7 +336,7 @@ function Projects() {
               ""
             ) : (
               <div
-                className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer 
+                className="hidden group-hover:block absolute top-[45%] translate-y-[-45%] md:top-[50%] -translate-x-0 md:translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer 
           "
                 onClick={nextSlide}
               >
