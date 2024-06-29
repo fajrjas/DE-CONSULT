@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import DE_LOGO from "../assets/DE_CONSULT_LOGO.jpg";
 import EngrPhoto from "../assets/206f74a2-4e90-44bd-b415-81cb6c327523.jfif";
+import Fajr from "../assets/eto na talga.jpg";
 import { Link } from "react-router-dom";
 import Nav from "../ui/Nav";
 import { FaArrowDown } from "react-icons/fa";
@@ -42,7 +43,7 @@ function Homepage() {
               className="rounded-full border-none bg-blue-900 hover:bg-blue-950 text-white text-lg py-2 px-10 mt-10 ease-in-out duration-200"
             >
               <div className="flex items-center flex-row gap-5">
-                <span>Our&nbsp;Engineers</span>{" "}
+                <span>Our&nbsp;members</span>{" "}
                 <FaArrowDown className="self-end animate-bounce" />
               </div>
             </button>
@@ -57,22 +58,22 @@ function Homepage() {
         </div>
       </Header>
       <div
-        className="bg-blue-900 grid place-items-start pt-10  md:grid-cols-3 text-center min-h-screen h-[80%] gap-6 pb-10"
+        className="bg-blue-900 grid place-items-start pt-10  lg:grid-cols-3 text-center min-h-full h-[80%] gap-6 pb-10"
         id="engineers"
       >
-        <div className="max-w-[300px] sm:max-w-[400px] md:max-w-[500px] mx-auto font-serif mt-8 lg:mt-20 grid  bg-slate-700 shadow-xl">
+        <div className="max-w-[300px] sm:max-w-[400px]  mx-auto font-serif mt-8 lg:mt-20 grid  bg-slate-700 shadow-xl">
           <h1 className="font-bold text-xl md:text-2xl lg:text-3xl text-center underline underline-offset-8 my-4 text-[#151b18be]">
-            Engr. Almajid Idjas
+            Senior Structural Engr. Almajid Idjas
           </h1>
           <p className="text-sm md:text-xl max-w-[70%] mx-auto text-white md:order-2  my-4">
             <span className="text-black font-bold">Engr. Almajid Idjas</span> is
-            a structural engineer with nearly seven years of experience. He
+            a structural engineer with more than 8 years of experience. He
             graduated from Western Mindanao State University (WMSU) with a civil
             engineering degree in 2016. Currently, he holds an executive
             position at DE CONSULT, leveraging his structural engineering
             expertise to contribute to the firm&apos;s success.
           </p>
-          <div className=" place-self-center mx-auto my-4 md:order-1 w-[12em] h-[12em]">
+          <div className=" place-self-center mx-auto my-4 md:order-1 w-[11em] h-[11em]">
             <img
               src={EngrPhoto}
               alt=""
@@ -80,36 +81,41 @@ function Homepage() {
             />
           </div>
         </div>
-        <div className="max-w-[300px] sm:max-w-[400px] md:max-w-[500px] mx-auto font-serif mt-8 lg:mt-20 grid  bg-slate-700 shadow-xl">
+        <div className="max-w-[300px] sm:max-w-[400px]  mx-auto font-serif mt-8 lg:mt-20 grid  bg-slate-700 shadow-xl">
           <h1 className="font-bold text-xl md:text-2xl lg:text-3xl text-center underline underline-offset-8 my-4 text-[#151b18be]">
-            Engr. Shawn Mendez
+            Software Developer. Alfajer Idjas
           </h1>
-          <p className="text-lg md:text-xl max-w-[70%] mx-auto text-white md:order-2  my-4">
-            <span className="text-black font-bold">Engr. Shawn Mendez</span>{" "}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-            sapiente totam quis, in incidunt error vero voluptates nam officiis
-            optio.
+          <p className="text-lg md:text-xl max-w-[70%] mx-auto text-white md:order-2  my-4 space-y-16">
+            <span className="text-black font-bold">Alfajer Idjas {"  "}</span> A
+            recent graduate from Western Mindanao State University (WMSU) with
+            an IT degree in 2023, Alfajer Idjas leverages his passion for
+            technology to craft innovative solutions for DE CONSULT&apos;s
+            software engineering team.
           </p>
-          <div className=" place-self-center mx-auto my-4 md:order-1 w-[12em] h-[12em]">
+          <div className=" place-self-center mx-auto my-4 md:order-1 w-[11em] h-[11em]">
             <img
-              src={EngrPhoto}
+              src={Fajr}
               alt=""
               className="w-full h-full  border-none shadow-2xl  rounded-full"
             />
           </div>
         </div>
-        <div className=" max-w-[300px] sm:max-w-[400px] md:max-w-[500px] mx-auto font-serif mt-8 lg:mt-20 grid  bg-slate-700 shadow-xl">
+        <div className=" max-w-[300px] sm:max-w-[400px]  mx-auto font-serif mt-8 lg:mt-20 grid  bg-slate-700 shadow-xl">
           <h1 className="font-bold text-xl md:text-2xl lg:text-3xl  text-center underline underline-offset-8 my-4 text-[#151b18be] ">
-            Engr. Jawpakkal
+            Arch. Radzmel Idjas
           </h1>
           <p className="text-lg md:text-xl max-w-[70%] mx-auto text-white md:order-2  my-4">
-            <span className="text-black font-bold"> Engr. Jawpakkals</span>{" "}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quis
-            quibusdam cum ut provident numquam explicabo aspernatur aperiam
-            accusantium, perspiciatis porro atque commodi laborum, debitis ipsam
-            at consequatur assumenda? Voluptatibus?
+            <span className="text-black font-bold">
+              Radzmel Idjas: Aspiring Architect
+            </span>{" "}
+            Currently finalizing his Architecture degree at Western Mindanao
+            State University (WMSU) in 2024, Radzmel Idjas is about to embark on
+            his journey in the world of design. His passion for creating
+            inspiring spaces is evident, and his time at WMSU has equipped him
+            with the skills to translate ideas into reality. Eager to learn and
+            collaborate, Radzmel is excited to see where architecture takes him
           </p>
-          <div className=" place-self-center mx-auto my-4 md:order-1 w-[12em] h-[12em]">
+          <div className=" place-self-center mx-auto my-4 md:order-1 w-[11em] h-[11em]">
             <img
               src={EngrPhoto}
               alt=""
