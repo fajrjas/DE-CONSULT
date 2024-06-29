@@ -76,7 +76,7 @@ function Homepage() {
             <img
               src={EngrPhoto}
               alt=""
-              className="w-full h-full  border-none shadow-2xl mix-blend-plus-darker rounded-full"
+              className="w-full h-full  border-none shadow-2xl  rounded-full"
             />
           </div>
         </div>
@@ -94,7 +94,7 @@ function Homepage() {
             <img
               src={EngrPhoto}
               alt=""
-              className="w-full h-full  border-none shadow-2xl mix-blend-plus-darker rounded-full"
+              className="w-full h-full  border-none shadow-2xl  rounded-full"
             />
           </div>
         </div>
@@ -113,7 +113,7 @@ function Homepage() {
             <img
               src={EngrPhoto}
               alt=""
-              className="w-full h-full  border-none shadow-2xl mix-blend-plus-darker rounded-full"
+              className="w-full h-full  border-none shadow-2xl  rounded-full"
             />
           </div>
         </div>
