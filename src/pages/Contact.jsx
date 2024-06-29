@@ -10,7 +10,7 @@ function Contact() {
             Contact Us
           </h1>
           <div className="mt-10">
-            <h2 className="text-3xl">This is our socials:</h2>
+            <h2 className="text-3xl">These are our socials:</h2>
             <div className="lg:flex md:gap-10">
               <div className="flex gap-4 mt-20">
                 <span className="text-3xl">
