@@ -287,7 +287,7 @@ function Projects() {
                 <BsChevronCompactRight size={30} />
               </div>
               <div
-                className="hover:translate-y-[20px] hover:color[#294ed4] absolute bottom-[3em] ml-[4.5em] md:ml-[7em] lg:left-[15em] text-2xl p-2 text-white cursor-pointer duration-200 ease-in-out animate-bounce
+                className="hover:translate-y-[20px] hover:color[#294ed4] absolute bottom-[3em] ml-[-1em] lg:left-[15em] text-2xl p-2 text-white cursor-pointer duration-200 ease-in-out animate-bounce
             text-center
           "
                 onClick={() => toDetails("details")}
