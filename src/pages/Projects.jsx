@@ -249,8 +249,8 @@ function Projects() {
 
   return (
     <div className="h-full">
-      <ProjectContainer className="max-w-[310px] mx-auto md:max-w-[600px] lg:max-w-[1200px] h-screen">
-        <div className="grid lg:grid-cols-3 lg:items-center lg:max-w-[1200px] gap-12 select-none mt-56 lg:mt-0 ">
+      <ProjectContainer className="max-w-[310px] mx-auto md:max-w-[600px] lg:max-w-[1200px] h-full ">
+        <div className="grid lg:grid-cols-3 lg:items-center h-fit lg:h-screen lg:max-w-[1200px] gap-12 select-none mt-56 lg:mt-0 ">
           <div className="col-span-1 flex flex-col">
             <h1 className="text-[ #294ed4] text-3xl font-bold lg:text-5xl lg:mt-15 mb-6">
               DE CONSULT PROJECTS
@@ -316,7 +316,7 @@ function Projects() {
         </div>
 
         {/* Specific Project info */}
-        <div className="grid md:grid-cols-2 pb-14 mt-28 md:gap-10 h-fit content-center">
+        <div className="grid md:grid-cols-2 pb-14 mt-28 md:gap-10 h-fit lg:h-screen content-center">
           <div className="" id="details">
             <header className="w-[300px]"></header>
             <div className="lg:max-w-[1200px] h-[400px] lg:h-[500px] lg:w-full m-auto pb-16 px-4 relative group transition-all max-w-[300px]">
