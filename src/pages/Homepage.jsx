@@ -2,7 +2,7 @@ import styled from "styled-components";
 import DE_LOGO from "../assets/DE_CONSULT_LOGO.jpg";
 import EngrPhoto from "../assets/206f74a2-4e90-44bd-b415-81cb6c327523.jfif";
 import Fajr from "../assets/eto na talga.jpg";
-import { Link } from "react-router-dom";
+
 import Nav from "../ui/Nav";
 import { FaArrowDown } from "react-icons/fa";
 
@@ -62,11 +62,11 @@ function Homepage() {
         className="bg-blue-900 grid place-items-start pt-10  lg:grid-cols-3 text-center min-h-full h-[80%] gap-6 pb-10"
         id="engineers"
       >
-        <div className="max-w-[300px] sm:max-w-[400px]  mx-auto font-serif mt-8 lg:mt-20 grid  bg-slate-700 shadow-xl">
-          <h1 className="font-bold text-xl md:text-2xl  text-center underline underline-offset-8 my-4 text-[#151b18be]">
+        <div className="max-w-[300px] sm:max-w-[350px]  mx-auto rounded-xl  font-serif mt-8 lg:mt-20 grid  bg-slate-700 shadow-xl">
+          <h1 className="px-12 font-bold text-xl md:text-2xl  text-center underline underline-offset-8 my-4 text-[#151b18be]">
             Senior Structural Engr. Almajid Idjas
           </h1>
-          <p className="text-lg max-w-[70%] mx-auto text-white md:order-2  my-4">
+          <p className="text-base max-w-[70%] mx-auto text-white md:order-2  my-4">
             <span className="text-black font-bold">Engr. Almajid Idjas</span> is
             a structural engineer with more than 8 years of experience. He
             graduated from Western Mindanao State University (WMSU) with a civil
@@ -82,11 +82,11 @@ function Homepage() {
             />
           </div>
         </div>
-        <div className="max-w-[300px] sm:max-w-[400px]  mx-auto font-serif mt-8 lg:mt-20 grid  bg-slate-700 shadow-xl">
-          <h1 className="font-bold text-xl md:text-2xl  text-center underline underline-offset-8 my-4 text-[#151b18be]">
+        <div className="max-w-[300px] sm:max-w-[350px] mx-auto rounded-xl font-serif mt-8 lg:mt-20 grid  bg-slate-700 shadow-2xl">
+          <h1 className="px-12 font-bold text-xl md:text-2xl  text-center underline underline-offset-8 my-4 text-[#151b18be]">
             Software Developer. Alfajer Idjas
           </h1>
-          <p className="text-lg max-w-[70%] mx-auto text-white md:order-2  my-4 space-y-16">
+          <p className="text-base max-w-[70%] mx-auto text-white md:order-2  my-4 space-y-16">
             <span className="text-black font-bold">Alfajer Idjas {"  "}</span> a
             recent graduate from Western Mindanao State University (WMSU) with
             an IT degree in 2023, Alfajer Idjas leverages his passion for
@@ -101,11 +101,11 @@ function Homepage() {
             />
           </div>
         </div>
-        <div className=" max-w-[300px] sm:max-w-[400px]  mx-auto font-serif mt-8 lg:mt-20 grid  bg-slate-700 shadow-xl">
-          <h1 className="font-bold text-xl md:text-2xl text-center underline underline-offset-8 my-4 text-[#151b18be] ">
+        <div className=" max-w-[300px] sm:max-w-[350px]  mx-auto rounded-xl  font-serif mt-8 lg:mt-20 grid  bg-slate-700 shadow-xl">
+          <h1 className="px-12 font-bold text-xl md:text-2xl text-center underline underline-offset-8 my-4 text-[#151b18be] ">
             Arch. Radzmel Idjas
           </h1>
-          <p className="text-lg max-w-[70%] mx-auto text-white md:order-2  my-4">
+          <p className="text-base max-w-[70%] mx-auto text-white md:order-2  my-4">
             <span className="text-black font-bold">
               Radzmel Idjas: Aspiring Architect
             </span>{" "}
